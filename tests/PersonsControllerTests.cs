@@ -109,6 +109,8 @@ namespace Persons.tests
             var person = okResult.Value.Should().BeAssignableTo<Person>().Subject;
             person.Id.Should().Be(51);
             Assert.Equal(51, person.Id);
+            Assert.Equal(newPerson.FirstName, person.FirstName); 
+
         }
     }
 }
